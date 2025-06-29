@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicoding Story App</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Skip to Content untuk Aksesibilitas -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header role="banner" class="header">
+        <nav role="navigation" class="navbar">
+            <div class="nav-brand">
+                <h1>Dicoding Stories</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#/home" class="nav-link">Home</a></li>
+                <li><a href="#/add-story" class="nav-link">Add Story</a></li>
+                <li><a href="#/login" class="nav-link" id="auth-link">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main" class="main-content">
+        <div id="app-container">
+            <!-- Content will be dynamically loaded here -->
+        </div>
+    </main>
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner hidden">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/models/StoryModel.js"></script>
+    <script src="js/models/AuthModel.js"></script>
+    <script src="js/views/HomeView.js"></script>
+    <script src="js/views/AddStoryView.js"></script>
+    <script src="js/views/LoginView.js"></script>
+    <script src="js/views/RegisterView.js"></script>
+    <script src="js/presenters/HomePresenter.js"></script>
+    <script src="js/presenters/AddStoryPresenter.js"></script>
+    <script src="js/presenters/AuthPresenter.js"></script>
+    <script src="js/utils/Router.js"></script>
+    <script src="js/utils/ViewTransition.js"></script>
+    <script src="js/utils/CameraUtils.js"></script>
+    <script src="js/utils/MapUtils.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

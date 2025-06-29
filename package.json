@@ -1,0 +1,67 @@
+{
+  "name": "dicoding-story-app",
+  "version": "2.0.0",
+  "description": "Dicoding Story App - Progressive Web Application with PWA Features",
+  "main": "src/scripts/index.js",
+  "scripts": {
+    "start-dev": "webpack serve --config webpack.dev.js --open",
+    "build": "webpack --config webpack.prod.js",
+    "build-dev": "webpack --config webpack.dev.js",
+    "serve": "webpack serve --config webpack.dev.js",
+    "clean": "rm -rf dist",
+    "lint": "echo \"No linting configured\"",
+    "test": "echo \"No tests configured\"",
+    "build:analyze": "webpack-bundle-analyzer dist/bundle.js",
+    "deploy:netlify": "npm run build && echo 'Upload dist/ folder to Netlify'",
+    "deploy:gh-pages": "npm run build && gh-pages -d dist",
+    "pwa:test": "npm run build && npx http-server dist -p 8080 -c-1",
+    "lighthouse": "npm run build && npx lighthouse http://localhost:8080 --view"
+  },
+  "keywords": [
+    "dicoding",
+    "story",
+    "spa",
+    "webpack",
+    "javascript",
+    "mvp",
+    "pwa",
+    "progressive-web-app",
+    "indexeddb",
+    "push-notifications"
+  ],
+  "author": "Dhio Pakusadewa <dhio.pakusadewa@example.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "babel-loader": "^9.1.3",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.10.0",
+    "http-server": "^14.1.1",
+    "lighthouse": "^11.0.0",
+    "webpack-bundle-analyzer": "^4.10.0",
+    "gh-pages": "^4.0.0"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  },
+  "browserslist": ["> 1%", "last 2 versions", "not dead"],
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "homepage": "https://dhio-pksd.github.io/dicoding-story-app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dhio-pksd/dicoding-story-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dhio-pksd/dicoding-story-app/issues"
+  }
+}
